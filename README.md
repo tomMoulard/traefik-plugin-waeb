@@ -1,6 +1,6 @@
 # traefik-plugin-waeb
 
-[![Build Status](https://github.com/tomMoulard/traefik-plugin-waeb/workflows/Main/badge.svg?branch=main)](https://github.com/tomMoulard/traefik-plugin-waeb/actions)
+[![Build Status](https://github.com/tomMoulard/traefik-plugin-waeb/actions/workflows/main.yml/badge.svg)](https://github.com/tomMoulard/traefik-plugin-waeb/actions/workflows/main.yml)
 
 This is a plugin for [Traefik](https://traefik.io) to build a web server.
 
