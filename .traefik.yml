@@ -1,0 +1,11 @@
+displayName: Waeb
+type: middleware
+
+import: github.com/tomMoulard/traefik-plugin-waeb
+
+summary: 'A web server inside Traefik'
+
+iconPath: ./docs/img/logo.png
+
+testData:
+  root: /var/www/html/

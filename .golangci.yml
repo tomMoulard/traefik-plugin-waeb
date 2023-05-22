@@ -1,0 +1,20 @@
+linters:
+  enable-all: true
+  disable:
+    - scopelint # deprecated
+    - deadcode # deprecated
+    - ifshort # deprecated
+    - nosnakecase # deprecated
+    - interfacer # deprecated
+    - varcheck # deprecated
+    - exhaustivestruct # deprecated
+    - golint # deprecated
+    - structcheck # deprecated
+    - maligned # deprecated
+
+issues:
+  exclude-rules:
+    - path: waeb.go
+      text: "var-naming: don't use an underscore in package name"
+    - path: waeb.go
+      text: "ST1003: should not use underscores in package names"

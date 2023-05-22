@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  traefik:
+    image: traefik:v3.0
+    command:
+      - --api.insecure=true
+      - --providers.docker
+      - --log.level=ERROR
+      - --experimental.localPlugins.traefik-plugin-waeb.modulename=github.com/tomMoulard/traefik-plugin-waeb
+    ports:
+      - 80:80
+      - 8080:8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./:/plugins-local/src/github.com/tomMoulard/traefik-plugin-waeb
+    labels:
+      traefik.http.routers.waeb.rule: Host(`waeb.localhost`)
+      traefik.http.routers.waeb.middlewares: waeb
+      traefik.http.middlewares.waeb.plugin.traefik-plugin-waeb.root: .
