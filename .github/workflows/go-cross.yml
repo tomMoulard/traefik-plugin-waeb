@@ -6,28 +6,25 @@ jobs:
   cross:
     name: Go
     runs-on: ${{ matrix.os }}
-    env:
-      CGO_ENABLED: 0
-
     strategy:
       matrix:
-        go-version: [ 1.16, 1.x ]
+        go-version: [ '1.20', '1.x' ]
         os: [ubuntu-latest]
 
     steps:
       # https://github.com/marketplace/actions/setup-go-environment
       - name: Set up Go ${{ matrix.go-version }}
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v3
         with:
           go-version: ${{ matrix.go-version }}
 
       # https://github.com/marketplace/actions/checkout
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # https://github.com/marketplace/actions/cache
       - name: Cache Go modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             ~/go/pkg/mod              # Module download cache
