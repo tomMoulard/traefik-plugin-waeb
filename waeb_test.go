@@ -9,7 +9,7 @@ import (
 	waeb "github.com/tomMoulard/traefik-plugin-waeb"
 )
 
-func TestDemo(t *testing.T) {
+func TestWaeb(t *testing.T) {
 	t.Parallel()
 
 	cfg := waeb.CreateConfig()

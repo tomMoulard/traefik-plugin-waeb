@@ -1,8 +1,10 @@
-# traefik-plugin-waeb
+# Waeb
 
 [![Build Status](https://github.com/tomMoulard/traefik-plugin-waeb/actions/workflows/main.yml/badge.svg)](https://github.com/tomMoulard/traefik-plugin-waeb/actions/workflows/main.yml)
 
-This is a plugin for [Traefik](https://traefik.io) to build a web server.
+Make Traefik a web server !
+
+This is a plugin for [Traefik](https://traefik.io) to build a **web server** as a middleware.
 
 ## Usage
 
@@ -17,7 +19,7 @@ YAML), where the interesting part is the `http.middlewares` section:
 http:
   routers:
     my-waeb-router:
-      rule: host(`demo.localhost`)
+      rule: host(`waeb.localhost`)
       service: noop@internal # required
       middlewares:
         - traefik-plugin-waeb
