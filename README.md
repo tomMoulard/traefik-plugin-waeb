@@ -6,6 +6,14 @@ Make Traefik a web server !
 
 This is a plugin for [Traefik](https://traefik.io) to build a **web server** as a middleware.
 
+> Not the plugin we deserved, but the plugin we needed.
+> 
+> ~ [@mpl](https://github.com/mpl) ([src](https://twitter.com/lejatorn/status/1661750793232617477))
+
+> Just because you can, doesn't mean you should
+> 
+> ~ [@dtomcej](https://github.com/dtomcej) ([src](https://twitter.com/daniel_tomcej/status/1661746210485723136))
+
 ## Usage
 
 ### Configuration
