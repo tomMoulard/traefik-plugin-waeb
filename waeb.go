@@ -18,22 +18,7 @@ func CreateConfig() *Config {
 	}
 }
 
-// Waeb a plugin to serve web content.
-type Waeb struct {
-	next   http.Handler
-	name   string
-	config *Config
-}
-
 // New created a new Waeb plugin.
-func New(_ context.Context, next http.Handler, config *Config, name string) (http.Handler, error) {
-	return &Waeb{
-		next:   next,
-		name:   name,
-		config: config,
-	}, nil
-}
-
-func (a *Waeb) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
-	http.FileServer(http.Dir(a.config.Root)).ServeHTTP(rw, req)
+func New(_ context.Context, _ http.Handler, config *Config, _ string) (http.Handler, error) {
+	return http.FileServer(http.Dir(config.Root)), nil
 }
