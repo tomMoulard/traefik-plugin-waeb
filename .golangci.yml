@@ -18,3 +18,12 @@ issues:
       text: "var-naming: don't use an underscore in package name"
     - path: waeb.go
       text: "ST1003: should not use underscores in package names"
+
+linters-settings:
+  depguard:
+    rules:
+      main:
+        allow:
+          - $gostd
+          - github.com/tomMoulard/traefik-plugin-waeb
+
